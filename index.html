@@ -1,80 +1,65 @@
-import Image from 'next/image'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panda Consults</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-gradient-to-b from-white via-[#f7f2ff] to-white text-gray-900">
-      <header className="bg-black py-6 flex justify-center">
-        <Image
-          src="/placeholder-logo.png"
-          alt="Panda Consults Logo"
-          width={120}
-          height={120}
-          className="rounded-xl p-1 bg-black"
-        />
-      </header>
+<header class="header">
+  <img src="logo.png" alt="Panda Consults Logo" class="logo" />
+</header>
 
-      <section className="max-w-4xl mx-auto px-6 py-12 text-center">
-        <h1 className="text-4xl font-bold text-purple-700 mb-4">Helping You Source Smarter</h1>
-        <p className="text-lg mb-6">
-          Panda Consults helps companies around the world find reliable manufacturers in China.
-          From vetting and verification to procurement and global delivery — we make sourcing simple, safe, and scalable.
-        </p>
-        <a href="#contact">
-          <button className="bg-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-700 transition">
-            Get a free consultation from Panda
-          </button>
-        </a>
-      </section>
+<main class="main-content">
+  <section class="hero">
+    <h1>Helping You Source Smarter</h1>
+    <p>Panda Consults helps companies around the world find reliable manufacturers in China. From factory vetting to global logistics — we make sourcing easy, safe, and effective.</p>
+    <a href="#contact" class="cta-button">Get a free consultation from Panda</a>
+  </section>
 
-      <section className="max-w-4xl mx-auto px-6 py-10">
-        <h2 className="text-2xl font-bold text-purple-700 mb-4">Why Choose Us</h2>
-        <ul className="list-disc pl-6 space-y-2 text-left">
-          <li>🛡️ Verified manufacturers & in-person factory audits</li>
-          <li>📦 End-to-end support — from sourcing to shipping</li>
-          <li>🌍 Global logistics expertise and transparent pricing</li>
-          <li>🤝 Local presence in China + fluent international communication</li>
-        </ul>
-      </section>
+  <section class="info">
+    <h2>Why Choose Panda Consults?</h2>
+    <ul>
+      <li>Verified and trusted factories</li>
+      <li>Factory inspections by local experts</li>
+      <li>Negotiations, production support, and shipping</li>
+      <li>Global delivery to over 20 countries</li>
+    </ul>
+  </section>
 
-      <section className="max-w-4xl mx-auto px-6 py-10 bg-white rounded-xl shadow-lg">
-        <h2 className="text-2xl font-bold text-purple-700 mb-4">How It Works</h2>
-        <ol className="list-decimal pl-6 space-y-3 text-left">
-          <li>📋 Tell us your sourcing needs</li>
-          <li>🔍 We research and verify top-fit manufacturers</li>
-          <li>📨 You receive quotes and production timelines</li>
-          <li>📦 We help negotiate, place the order, and arrange delivery</li>
-        </ol>
-      </section>
+  <section class="info">
+    <h2>Our Process</h2>
+    <ol>
+      <li>Tell us your needs</li>
+      <li>We find the best manufacturers</li>
+      <li>Sample approval and contract negotiation</li>
+      <li>Production monitoring and delivery</li>
+    </ol>
+  </section>
 
-      <section className="max-w-4xl mx-auto px-6 py-10">
-        <h2 className="text-2xl font-bold text-purple-700 mb-4">Our Global Reach</h2>
-        <p>
-          We've helped clients from over 20 countries streamline their supply chain and unlock reliable manufacturing partners in China. No matter your location, Panda Consults ensures smooth, cross-border sourcing and delivery.
-        </p>
-      </section>
+  <section class="info">
+    <h2>Our Global Reach</h2>
+    <p>We partner with businesses worldwide, helping them successfully manufacture and deliver products with confidence.</p>
+  </section>
 
-      <section id="contact" className="max-w-4xl mx-auto px-6 py-12 bg-purple-50 rounded-xl">
-        <h2 className="text-2xl font-bold text-purple-700 mb-4 text-center">Contact Us</h2>
-        <form
-          action="https://formsubmit.co/ask@pandaconsults.com"
-          method="POST"
-          className="space-y-4"
-        >
-          <input type="text" name="name" placeholder="Your Name" required className="w-full px-4 py-2 border rounded" />
-          <input type="email" name="email" placeholder="Your Email" required className="w-full px-4 py-2 border rounded" />
-          <textarea name="message" placeholder="Your Message" required rows={4} className="w-full px-4 py-2 border rounded" />
-          <input type="text" name="_honey" style={{ display: 'none' }} />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://pandaconsults.com/thank-you.html" />
-          <button type="submit" className="bg-purple-600 text-white px-6 py-3 rounded font-semibold hover:bg-purple-700 transition">
-            Send Message
-          </button>
-        </form>
-      </section>
+  <section id="contact" class="contact-form">
+    <h2>Contact Panda Consults</h2>
+    <form action="https://formsubmit.co/ask@pandaconsults.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="hidden" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</main>
 
-      <footer className="text-center py-6 bg-black text-white mt-10">
-        &copy; {new Date().getFullYear()} Panda Consults. All rights reserved.
-      </footer>
-    </main>
-  )
-}
+<footer class="footer">
+  &copy; 2025 Panda Consults. All rights reserved.
+</footer>
+
+</body>
+</html>
